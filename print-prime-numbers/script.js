@@ -1,26 +1,21 @@
-//PRINT N PRIME NUMBERS
+// //PRINT N PRIME NUMBERS
 
-let n,i,a,b;
-n= parseInt(prompt("Give the Value"));
-
-console.log(n);
-a=0;
+let a = parseInt(prompt('Enter lower number: '));
+let b= parseInt(prompt('Enter higher number: '));
 
 
-for (i=2;n>i;i++) {
-    if (n%i==0) {
-         a=1;
-        break;
+for (let i=a; i <=b; i++) {
+    let c = 0;
+
+    for (let j = 2; j < i; j++) {
+        if (i % j == 0) {
+            c= 1;
+            break;
+        }
+    }
+
+
+    if (i > 1 && c == 0) {
+        console.log(i);
+    }
 }
-}  
-if(a==1){
-
-    console.log("Not prime number");
-}
-else{
-
-    console.log("Prime Number");
-}
-   
-
-
